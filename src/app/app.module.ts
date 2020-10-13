@@ -11,6 +11,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 // RUTAS
 import { ROUTES } from './app.routes';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// Services
+// import { SpotifyService } from './services/spotify.service';
 
 
 
@@ -26,6 +30,7 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [],
