@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-2 m-5 animated fadeIn">
+    <div *ngFor="let cancion of items" class="col mb-4">
+        <div class="card">
+            <img [src]="cancion.images | noimage" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{cancion.name}}</h5>
+                <p class="card-text">
+                    <span *ngFor="let artista of cancion.artists" class="badge badge-danger">
+                        {{artista.name}}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
